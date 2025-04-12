@@ -80,25 +80,25 @@ using FutaMeetWeb.Services;
 
 var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddRazorPages();
-	builder.Services.AddSingleton<SessionService>();
-	builder.Services.AddDistributedMemoryCache();
-	builder.Services.AddSession(options =>
-	{
+    builder.Services.AddSingleton<SessionService>();
+    builder.Services.AddDistributedMemoryCache();
+    builder.Services.AddSession(options =>
+    {
 	    options.IdleTimeout = TimeSpan.FromMinutes(4);
 	    options.Cookie.HttpOnly = true;
 	    options.Cookie.IsEssential = true;
-	});
-	builder.Services.AddSignalR();
+    });
+    builder.Services.AddSignalR();
 
 var app = builder.Build();
-	app.UseHttpsRedirection();
-	app.UseRouting();
-	app.UseAuthorization();
-	app.MapStaticAssets();
-	app.UseSession();
-	app.MapHub<SessionHub>("/SessionHub");
-	app.MapRazorPages();
-		.WithStaticAssets();
+    app.UseHttpsRedirection();
+    app.UseRouting();
+    app.UseAuthorization();
+    app.MapStaticAssets();
+    app.UseSession();
+    app.MapHub<SessionHub>("/SessionHub");
+    app.MapRazorPages();
+        .WithStaticAssets();
 app.Run();
 ```
 -- as you can see all calls fall exacly below their respective declarations, this is more readable for me,well one man's food is another Man's Poison, try this out 
