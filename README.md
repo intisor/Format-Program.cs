@@ -15,7 +15,7 @@
 ## Prerequisites
 - **PowerShell**: Ensure PowerShell is installed (it comes with Windows by default).
 - **Visual Studio 2022**: The script is designed to be run as an external tool in VS2022.
-- **.NET Project**: The script targets `Program.cs` in a .NET project (tested with .NET 8).
+- **.NET Project**: The script targets `Program.cs` in a .NET project (tested with .NET 8/9).
 
 ## Installation and Setup
 
