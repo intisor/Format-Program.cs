@@ -47,9 +47,6 @@ Follow these steps to integrate the script into VS2022:
 ## Example
 ### Input (`Program.cs` Before)
 ```csharp
-using FutaMeetWeb.Hubs;
-using FutaMeetWeb.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<SessionService>();
@@ -75,9 +72,6 @@ app.Run();
 
 ### Output (`Program.cs` After)
 ```csharp
-using FutaMeetWeb.Hubs;
-using FutaMeetWeb.Services;
-
 var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddRazorPages();
     builder.Services.AddSingleton<SessionService>();
