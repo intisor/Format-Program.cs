@@ -95,7 +95,7 @@ var app = builder.Build();
         .WithStaticAssets();
 app.Run();
 ```
--- as you can see all calls fall exacly below their respective declarations, this is more readable for me,well one man's food is another Man's Poison, try this out 
+-- as you can see all calls fall exactly below their respective declarations, this is more readable for me,well one man's food is another Man's Poison, try this out 
 
 ## Contributing
 Feel free to fork this repository, make improvements, and submit pull requests. If you encounter issues or have suggestions, please open an issue on GitHub.
